@@ -63,12 +63,13 @@
     <div class="demo"></div>
 
     <div class="setup-open">
-      <img src="./img/user-1.jpg" class="setup-open-icon">
+      <img src="./img/user-1.jpg" class="setup-open-icon" tabindex="0">
     </div>
   </header>
 
   <div class="overlay setup hidden">
-    <form class="setup-wizard-form" method="post" enctype="multipart/form-data" autocomplete="off">
+    <form class="setup-wizard-form" method="post" enctype="multipart/form-data" autocomplete="off"
+      action="https://js.dump.academy/code-and-magick">
 
       <div class="setup-title">
         <div class="setup-user">
@@ -77,11 +78,12 @@
             <input type="file" name="avatar">
           </div>
           <label>
-            <input type="text" name="username" maxlength="25" required class="setup-user-name" value="Синий Пендальф" />
+            <input type="text" name="username" maxlength="25" minlength="2" required class="setup-user-name"
+              value="Синий Пендальф" />
           </label>
         </div>
 
-        <span class="setup-close">&times;</span>
+        <span class="setup-close" tabindex="0">&times;</span>
       </div>
 
 
@@ -153,7 +155,7 @@
           </div>
         </div>
 
-        <button class="button setup-submit">Сохранить</button>
+        <button class="button setup-submit" type="submit">Сохранить</button>
       </div>
     </form>
   </div>
